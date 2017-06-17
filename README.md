@@ -1,6 +1,7 @@
 
 # 배달의 민족 St 웹어플리케이션 만들기 연습
-> 서울대학교 벤처창업 웹프로그래밍 기말고사 [공개문제](https://gist.github.com/allieus/fe16998add86716b4825ec56205e00ce)를 활용하여 django를 연습한 내용입니다. 요구사항과 참고자료는 아래와 같습니다.
+> 서울대학교 벤처창업 웹프로그래밍 기말고사 [공개문제](https://gist.github.com/allieus/fe16998add86716b4825ec56205e00ce)를 활용하여 django를 연습한 내용입니다.
+> 요구사항과 참고자료는 아래와 같습니다.
 
 ### 출처
 + 서울대학교 벤처창업 웹프로그래밍 기말고사 [공개문제](https://gist.github.com/allieus/fe16998add86716b4825ec56205e00ce)
