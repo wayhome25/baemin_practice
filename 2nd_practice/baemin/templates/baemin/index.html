@@ -18,7 +18,7 @@
       <td>{{ shop.name }}</td>
       <td>{{ shop.tel }}</td>
       <td>{{ shop.addr }}</td>
-      <td><a href="#" class="btn btn-primary">주문하기</a></td>  <!-- 아래 항목에서 구현 예정 -->
+      <td><a href="{% url "baemin:order_new" shop.id %}" class="btn btn-primary">주문하기</a></td>  <!-- 아래 항목에서 구현 예정 -->
     </tr>
     {% endfor %}
   </tbody>
