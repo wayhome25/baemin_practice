@@ -15,9 +15,11 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
+from django.shortcuts import redirect
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^accounts/', include('accounts.urls')),
     url(r'^baemin/', include('baemin.urls', namespace='baemin')),
+    url(r'^$', lambda r: redirect('baemin:index'), name='root'), # NOTE: lambda 함수 활용하여 redirect
 ]
