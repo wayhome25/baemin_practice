@@ -1,1 +1,29 @@
-<h1>{{ user.username }}'s profile</h1>
+<h3>{{ user }}'s Profile</h3>
+
+<h4>주문내역 (TODO)</h4>
+
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>가게명</th>
+            <th>주문상품</th>
+            <th>총액</th>
+            <th>주문일시</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        {% for order in user.order_set.all %}
+        <tr>
+            <td>{{ order.shop.name }}</td>
+            <td>
+                {% for item in order.item_set.all %}
+                    {{ item.name }}
+                {% endfor %}
+            </td>
+            <td>{{ order.total }}</td>
+            <td>{{ order.created_at }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
