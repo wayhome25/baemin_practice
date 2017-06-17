@@ -3,4 +3,25 @@
 {% block content %}
 <h3>가게목록</h3>
 
+<table class="table table-hover table-bordered">
+  <thead>
+    <tr>
+      <th>가게명</th>
+      <th>전화번호</th>
+      <th>주소</th>
+      <th>주문하기</th>
+    </tr>
+    </thead>
+  <tbody>
+    {% for shop in shop_list  %}
+    <tr>
+      <td>{{ shop.name }}</td>
+      <td>{{ shop.tel }}</td>
+      <td>{{ shop.addr }}</td>
+      <td><a href="#" class="btn btn-primary">주문하기</a></td>  <!-- 아래 항목에서 구현 예정 -->
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
 {% endblock %}
