@@ -25,6 +25,9 @@ class Order(models.Model):
     item_set = models.ManyToManyField(Item)
     created_at = models.DateTimeField(auto_now_add=True)
 
+    class Meta:
+        ordering = ['-created_at']
+
     @property
     def total(self):
         return sum(item.price for item in self.item_set.all())

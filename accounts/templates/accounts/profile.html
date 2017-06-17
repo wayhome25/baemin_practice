@@ -1,6 +1,8 @@
+{% extends "baemin/layout.html" %}
+{% block content %}
 <h3>{{ user }}'s Profile</h3>
 
-<h4>주문내역 (TODO)</h4>
+<h4>주문내역</h4>
 
 <table class="table table-bordered table-hover">
     <thead>
@@ -27,3 +29,4 @@
         {% endfor %}
     </tbody>
 </table>
+{% endblock %}

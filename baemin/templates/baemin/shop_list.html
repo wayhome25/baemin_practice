@@ -1,6 +1,7 @@
-{% extends "mysite/" %}
-{{user}}
-<table>
+{% extends "baemin/layout.html" %}
+{% block content %}
+<h3>가게목록</h3>
+<table class="table table-bordered table-hover">
     <thead>
       <tr>
         <th>가게명</th>
@@ -15,8 +16,9 @@
             <td>{{ shop.name }}</td>
             <td>{{ shop.tel }}</td>
             <td>{{ shop.addr }}</td>
-            <td><a href="{% url "baemin:order" shop.id %}">주문하기</a></td>
+            <td><a href="{% url "baemin:order" shop.pk %}" class="btn btn-primary">주문하기</a></td>
           </tr>
         {% endfor %}
     </tbody>
   </table>
+{% endblock %}

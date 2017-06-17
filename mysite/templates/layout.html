@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>
+      {% block title %}
+      배민st 연습프로젝트
+      {% endblock %}
+    </title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-2.2.4.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <ul class="nav nav-pills">
+            <li role="presentation"><a href="{% url "baemin:shop_list" %}">Home</a></li>
+            {% if user.is_authenticated %}
+            <li role="presentation"><a href="{% url "profile" %}">Profile</a></li>
+            <li role="presentation"><a href="{% url "logout" %}">로그아웃</a></li>
+            {% else %}
+            <li role="presentation"><a href="{% url "login" %}">로그인</a></li>
+            <li role="presentation"><a href="{% url "signup" %}">회원가입</a></li>
+            {% endif %}
+          </ul>
+          {% block content %}
+          {% endblock %}
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
